@@ -35,11 +35,14 @@ setup_env.bat # For Windows
 setup_env.sh # For Unix/Linux
 
 This script will:
-- Check for Conda installation and prompt for the Python version.
-- Create and activate a Conda environment named `myenv`.
+- Check for Conda installation (assumes Conda is in PATH).
+- Prompt for the Python version, allowing flexibility.
+- Create and activate a Conda environment (default name `myenv`, replaceable with preferred name).
+- Check for the existence of `.env.example` and `requirements.txt`, providing warnings if not found.
 - Create the necessary project directories.
 - Copy `.env.example` to `.env` for environment variable setup.
 - Install dependencies from `requirements.txt`.
+
 
 ### Configuring Environment Variables
 
@@ -73,10 +76,7 @@ This script will:
 
 ### Notes
 
-- The script assumes Conda is installed and available in the PATH.
-- Users should replace `myenv` with their preferred environment name if desired.
-- The script prompts for the Python version, allowing flexibility.
-- The script creates the standard directory structure as outlined in your `README.md`.
-- Ensure to provide instructions on modifying `.env` with actual environment variables.
-- The script checks for the existence of `.env.example` and `requirements.txt` before proceeding, providing warnings if these files are not found.
-- Users might need to adjust file paths if they are different from the standard layout.
+### Notes
+
+- Users might need to adjust file paths in the scripts or project structure if they are different from the standard layout.
+
