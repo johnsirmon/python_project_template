@@ -1,6 +1,9 @@
 @echo off
 SETLOCAL ENABLEDELAYEDEXPANSION
 
+REM "@echo off" turns off the command echo, so commands are not shown in the output.
+REM "SETLOCAL ENABLEDELAYEDEXPANSION" enables delayed expansion mode, allowing the use of variables within loops.
+
 REM Check for administrative privileges
 net session >nul 2>&1
 if %errorlevel% neq 0 (
