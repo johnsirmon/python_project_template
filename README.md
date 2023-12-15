@@ -1,6 +1,6 @@
 # Python Project Template
 
-![Python Version](https://img.shields.io/badge/python-3.8-blue.svg)
+![Python Version](https://img.shields.io/badge/python-3.11-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 This repository serves as a template for Python projects, providing a standardized structure and setup process. It includes essential configuration files and a basic directory layout to kickstart your Python development.
