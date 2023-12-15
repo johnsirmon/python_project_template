@@ -31,3 +31,14 @@ Run the `setup_env.bat` script to create the Conda environment and set up the pr
 
 ```bash
 setup_env.bat
+
+
+### Notes
+
+- The script assumes Conda is installed and available in the PATH.
+- Users should replace `myenv` with their preferred environment name if desired.
+- The script prompts for the Python version, allowing flexibility.
+- The script creates the standard directory structure as outlined in your `README.md`.
+- Ensure to provide instructions on modifying `.env` with actual environment variables.
+- The script checks for the existence of `.env.example` and `requirements.txt` before proceeding, providing warnings if these files are not found.
+- Users might need to adjust file paths if they are different from the standard layout.
