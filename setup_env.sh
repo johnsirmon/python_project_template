@@ -7,8 +7,15 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
+#!/bin/bash
+
+# Explicitly set the Conda path
+CONDA_PATH="/home/johnsirmon/miniconda3"
+
 # Check for Conda installation
-if ! command -v conda &> /dev/null; then
+if [ -d "$CONDA_PATH" ]; then
+    export PATH="$CONDA_PATH/bin:$PATH"
+else
     echo "Conda is not installed or not in PATH."
     echo "To install Conda, download it from https://www.anaconda.com/products/individual and follow the installation instructions."
     echo "If Conda is installed but not in PATH, you can add it manually."
@@ -16,6 +23,9 @@ if ! command -v conda &> /dev/null; then
     echo "Consult the Conda documentation or a system administrator for help on modifying the PATH."
     exit 1
 fi
+
+# Continue with the rest of your script
+# ...
 
 # Prompt for Python version
 read -p "Enter Python version (e.g., 3.8): " PYTHON_VERSION
