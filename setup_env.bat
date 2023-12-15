@@ -26,6 +26,12 @@ if %errorlevel% neq 0 (
 )
 
 REM Prompt for Python version
+REM Before running this script, you should decide which Python version you need.
+REM To check the Python versions available on Conda, you can use the command "conda search python".
+REM It's important to choose a version that is compatible with your project's requirements.
+REM Generally, it's recommended to use a stable release. For example, as of my last update, Python 3.8 or 3.9 are good choices for most projects.
+REM Use a specific version number rather than a generic one to ensure consistency across different environments.
+REM After determining the appropriate Python version, enter it when prompted by the script.
 SET /P PYTHON_VERSION="Enter Python version (e.g., 3.8): "
 
 REM Create Conda environment
