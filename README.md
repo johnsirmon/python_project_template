@@ -25,3 +25,9 @@ Start by cloning this repository to your local machine:
 git clone https://github.com/yourusername/python_project_template.git
 cd python_project_template
 
+### 2. Set Up the Environment
+
+Run the `setup_env.bat` script to create the Conda environment and set up the project structure:
+
+```bash
+setup_env.bat
