@@ -9,8 +9,13 @@ fi
 
 #!/bin/bash
 
-# Explicitly set the Conda path
-CONDA_PATH="/home/johnsirmon/miniconda3"
+#!/bin/bash
+
+# Get the user's home directory
+USER_HOME=$(eval echo ~$USER)
+
+# Construct the Conda path
+CONDA_PATH="$USER_HOME/miniconda3"
 
 # Check for Conda installation
 if [ -d "$CONDA_PATH" ]; then
@@ -23,6 +28,9 @@ else
     echo "Consult the Conda documentation or a system administrator for help on modifying the PATH."
     exit 1
 fi
+
+# Continue with the rest of your script
+# ...
 
 # Continue with the rest of your script
 # ...
