@@ -32,7 +32,7 @@ echo Setting up environment variables...
 IF EXIST .env.example (
     COPY .env.example .env
 ) ELSE (
-    echo Warning: .env.example not found.
+    echo Warning: .env.example not found. Please ensure it exists in the root directory.
 )
 
 REM Install dependencies from requirements.txt
@@ -40,7 +40,7 @@ IF EXIST requirements.txt (
     echo Installing dependencies from requirements.txt...
     pip install -r requirements.txt
 ) ELSE (
-    echo Warning: requirements.txt not found.
+    echo Warning: requirements.txt not found. Please ensure it exists in the root directory.
 )
 
 echo Environment setup complete!
