@@ -1,9 +1,14 @@
+REM "@echo off" turns off the command echo, so commands are not shown in the output.
+REM "SETLOCAL ENABLEDELAYEDEXPANSION" enables delayed expansion mode, allowing the use of variables within loops.
 @echo off
 SETLOCAL ENABLEDELAYEDEXPANSION
 
-REM "@echo off" turns off the command echo, so commands are not shown in the output.
-REM "SETLOCAL ENABLEDELAYEDEXPANSION" enables delayed expansion mode, allowing the use of variables within loops.
-
+REM This part of the script checks if you have administrative rights.
+REM "net session" is a command that can only be run successfully by an administrator.
+REM ">nul 2>&1" hides any output or errors from the "net session" command.
+REM "if %errorlevel% neq 0" checks if the last command (net session) failed (which it does if you're not an admin).
+REM If you are not an admin, it shows a message explaining you need to run the script as an Administrator.
+REM It then stops the script ("exit /b 1") because it needs admin rights to continue.
 REM Check for administrative privileges
 net session >nul 2>&1
 if %errorlevel% neq 0 (
