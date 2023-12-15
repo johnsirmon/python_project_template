@@ -18,12 +18,22 @@ if %errorlevel% neq 0 (
 )
 
 REM Check for Conda installation
+REM Conda is a package manager and environment management system for Python.
+REM It helps in installing different versions of Python and managing dependencies.
+REM The command "conda --version" checks if Conda is installed and accessible.
+REM If Conda is installed but the command fails, it might not be added to your PATH environment variable.
+REM The PATH environment variable is a system variable that lists directories where the system looks for executable files.
+REM If Conda is not in PATH, the system can't find it just by typing "conda" in the command prompt.
 conda --version > nul 2>&1
 if %errorlevel% neq 0 (
     echo Conda is not installed or not in PATH.
-    echo Please install Conda and ensure it's added to your PATH.
+    echo To install Conda, download it from https://www.anaconda.com/products/individual and follow the installation instructions.
+    echo If Conda is installed but not in PATH, you can add it manually.
+    echo To add Conda to PATH, find the Conda install directory and add it to your system's PATH variable.
+    echo Consult the Conda documentation or a system administrator for help on modifying the PATH.
     exit /b 1
 )
+
 
 REM Prompt for Python version
 REM Before running this script, you should decide which Python version you need.
