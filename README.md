@@ -2,6 +2,14 @@
 
 This repository serves as a template for Python projects, providing a standardized structure and setup process. It includes essential configuration files and a basic directory layout to kickstart your Python development.
 
+## Pre-Setup Requirements
+
+Before you begin setting up this project, ensure the following prerequisites are met:
+- Conda is installed on your system. [Install Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) if you haven't already.
+- Conda must be added to your system's PATH environment variable. [Manage PATH](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#setting-environment-variables).
+- For Windows users, administrative privileges are required to run the setup script. To do this, right-click on the Command Prompt and select "Run as administrator".
+
+
 ## Project Structure
 
 - `src/`: Main source code for the project. This is where your application logic resides.
@@ -79,4 +87,8 @@ This script will:
 ### Notes
 
 - Users might need to adjust file paths in the scripts or project structure if they are different from the standard layout.
+- Ensure administrative privileges when running the `setup_env.bat` or `setup_env.sh` script, especially on Windows.
+- Adjust file paths in the scripts or project structure as needed if they differ from the standard layout.
+- For Git-related operations, make sure Git is installed on your system. [Git Setup](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
 
